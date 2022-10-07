@@ -10,10 +10,9 @@ private:
 	int velocity;
 	int length;
 	char direction;
-
 public:
-	Snake(COORD snakePos, int snakeVel);
+	Snake(COORD snakewPos, int snakeVel);
 	void ChangeDirections(char snakeDirec);
 	void SnakeMovement();
-	COORD AcctPosition();
+	COORD RealPosition();
 };

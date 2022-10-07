@@ -1,11 +1,12 @@
 #include "Snake.h"
 
-Snake::Snake(COORD snakePos, int snakeVel)
+Snake::Snake(COORD snakePos, int snakeVel) :
+	position(snakePos),
+	velocity(snakeVel),
+	length(1),
+	direction('n')
 {
-	position = snakePos;
-	velocity = snakeVel;
-	length = 1;
-	direction = 'n';
+
 }
 
 void Snake::ChangeDirections(char snakeDirec)
@@ -25,7 +26,9 @@ void Snake::SnakeMovement()
 
 }
 
-COORD Snake::AcctPosition()
+COORD Snake::RealPosition() 
 {
 	return position;
 }
+
+
