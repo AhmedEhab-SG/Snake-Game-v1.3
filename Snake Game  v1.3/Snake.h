@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <Windows.h>
+#include "Draw.h"
 using namespace std;
 
 class Snake
@@ -15,4 +16,8 @@ public:
 	void ChangeDirections(char snakeDirec);
 	void SnakeMovement();
 	COORD RealPosition();
+	bool FoodEaten(COORD FoodPosition);
+	void Grow();
+	bool SnakeCollided();
+	
 };

@@ -1,16 +1,19 @@
 #include "Draw.h"
 
-//const int Draw::width = 100;
-//const int Draw::height = 25;
+const int Draw::width = 100;
+const int Draw::height = 25;
+bool Draw::GameOver = false;
 void Draw::ClearScreen()
 {
 	
 	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), { 0,0 });
 }
-Snake snake({ width / 2 , height / 2 } ,1 );
+Snake snake({ Draw::width / 2 , Draw::height / 2 } ,1 ); // snake initiliaztion to constractor
+Food food; // parameterless constructor
 void Draw::Visual()
 {
-	COORD SnakePosition = snake.RealPosition();
+	COORD SnakePosition = snake.RealPosition(); // carries real position and drawing
+	COORD FoodPosition = food.RealPosition();	// ~ ~ ~
 	for (int i = 0; i < height; i++)
 	{
 		cout << "#";
@@ -20,6 +23,8 @@ void Draw::Visual()
 				cout << "#";
 			else if (i == SnakePosition.Y && j == SnakePosition.X)
 				cout << "0";
+			else if (i == FoodPosition.Y && j == FoodPosition.X)
+				cout << "@";
 			else
 				cout << " ";
 		}
@@ -48,5 +53,22 @@ void Draw::Controls()
 			break;
 		}
 	}
-	snake.SnakeMovement();
+	snake.SnakeMovement(); 
 }
+
+void Draw::GenerateNewFood()
+{
+	if (snake.FoodEaten(food.RealPosition()))
+	{
+		food.GenerateFood();
+		snake.Grow();
+	}
+}
+
+bool Draw::GameController()
+{
+	if (snake.SnakeCollided()) GameOver = true;
+	return GameOver;
+}
+
+

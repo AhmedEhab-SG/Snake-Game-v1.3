@@ -31,4 +31,26 @@ COORD Snake::RealPosition()
 	return position;
 }
 
+bool Snake::FoodEaten(COORD FoodPosition)
+{
+	if (FoodPosition.X == position.X && FoodPosition.Y == position.Y)
+		return true;
+	else return false;
+
+}
+
+void Snake::Grow()
+{
+	length++;
+}
+
+bool Snake::SnakeCollided()
+{
+	if (position.X < 1 || position.X > Draw::width - 2 || position.Y < 1 || position.Y > Draw::height - 2)
+		return true;
+	else return false; 
+}
+
+
+
 
