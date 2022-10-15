@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Snake Game  v1.3.cpp">
+    <ClCompile Include="SnakeGameV1.3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Draw.cpp">
@@ -27,6 +27,9 @@
     <ClCompile Include="Food.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="StartGame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Draw.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Food.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StartGame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

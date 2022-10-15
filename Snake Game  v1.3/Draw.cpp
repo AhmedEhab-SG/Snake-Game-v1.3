@@ -1,11 +1,14 @@
 #include "Draw.h"
 
+
 const int Draw::width = 100;
 const int Draw::height = 25;
+int Draw::score;
 bool Draw::GameOver = false;
+
+
 void Draw::ClearScreen()
 {
-	
 	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), { 0,0 });
 }
 Snake snake({ Draw::width / 2 , Draw::height / 2 } ,1 ); // snake initiliaztion to constractor
@@ -14,19 +17,33 @@ void Draw::Visual()
 {
 	COORD SnakePosition = snake.RealPosition(); // carries real position and drawing
 	COORD FoodPosition = food.RealPosition();	// ~ ~ ~
+	vector<COORD> snakeBody = snake.returnBody();// bodyparts 
+	cout << "Score: " << score << "\n\n";
 	for (int i = 0; i < height; i++)
 	{
 		cout << "#";
-		for (int j = 0; j < width; j++)
+		for (int j = 0; j < width - 2; j++)
 		{
 			if (i == 0 || i == height - 1)
 				cout << "#";
-			else if (i == SnakePosition.Y && j == SnakePosition.X)
+			else if (i == SnakePosition.Y && j + 1 == SnakePosition.X)
 				cout << "0";
-			else if (i == FoodPosition.Y && j == FoodPosition.X)
+			else if (i == FoodPosition.Y && j + 1 == FoodPosition.X)
 				cout << "@";
 			else
-				cout << " ";
+			{
+				bool checkBody = false;
+				for (int k = 0; k < snakeBody.size() - 1; k++)
+				{
+					if (i == snakeBody[k].Y && j + 1 == snakeBody[k].X)
+					{
+						cout << 'o';
+						checkBody = true;
+						break;
+					}
+				}
+				if (!checkBody) cout << ' ';
+			}
 		}
 		cout << "#\n";
 	}
@@ -62,6 +79,7 @@ void Draw::GenerateNewFood()
 	{
 		food.GenerateFood();
 		snake.Grow();
+		score++;
 	}
 }
 
