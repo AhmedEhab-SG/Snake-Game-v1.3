@@ -6,13 +6,14 @@ const int Draw::height = 25;
 int Draw::score;
 bool Draw::GameOver = false;
 
+Snake snake({ Draw::width / 2 , Draw::height / 2 }, 1); // snake initiliaztion to constractor
+Food food; // parameterless constructor
 
 void Draw::ClearScreen()
 {
 	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), { 0,0 });
 }
-Snake snake({ Draw::width / 2 , Draw::height / 2 } ,1 ); // snake initiliaztion to constractor
-Food food; // parameterless constructor
+
 void Draw::Visual()
 {
 	COORD SnakePosition = snake.RealPosition(); // carries real position and drawing
@@ -89,4 +90,8 @@ bool Draw::GameController()
 	return GameOver;
 }
 
+void Draw::ShowScore()
+{
+	cout << "\n\n\nGame Over your Score is: " << score << "\n\n\n";
 
+}

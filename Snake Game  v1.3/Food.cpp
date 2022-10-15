@@ -7,8 +7,8 @@ Food::Food()
 
 void Food::GenerateFood()
 {
-	fPosition.X = (rand() % Draw::width - 3) + 1;
-	fPosition.Y = (rand() % Draw::height - 3) + 1;
+	fPosition.X = (rand() % Draw::width - 3) + 3;
+	fPosition.Y = (rand() % Draw::height - 3) + 3;
 }
 
 COORD Food::RealPosition()

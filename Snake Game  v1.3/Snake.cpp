@@ -3,7 +3,7 @@
 Snake::Snake(COORD snakePos, int snakeVel) :
 	position(snakePos),
 	velocity(snakeVel),
-	length(1),
+	length(3),
 	direction('n')
 {
 	body.push_back(position);
@@ -50,7 +50,7 @@ bool Snake::SnakeCollided()
 {
 	if (position.X < 1 || position.X > Draw::width - 2 ||
 		position.Y < 1 || position.Y > Draw::height - 2) return true;
-	for (int i = 0; i < length - 2; i++)
+	for (int i = 0; i < length - 4; i++)
 	{
 		if (position.X == body[i].X && position.Y == body[i].Y) return true;
 	}

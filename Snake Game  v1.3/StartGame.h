@@ -7,6 +7,5 @@ private:
 	char input;
 public:
 	StartGame();
-	void ShowScore();
 };
 

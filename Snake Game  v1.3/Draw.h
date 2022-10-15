@@ -5,8 +5,6 @@
 #include <conio.h>
 #include "Food.h"
 #include "StartGame.h"
-//#define width 100
-//#define height 25
 using namespace std;
 
 class Draw
@@ -22,6 +20,7 @@ public:
 	void Controls();
 	void GenerateNewFood();
 	bool GameController();
+	void ShowScore();
 
 };
 

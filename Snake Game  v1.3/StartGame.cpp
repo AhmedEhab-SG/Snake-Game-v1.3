@@ -1,5 +1,5 @@
 ﻿#include "StartGame.h"
-#include "Draw.h"
+
 
 StartGame::StartGame()
 {
@@ -26,10 +26,4 @@ Y88b  d88P 888  888 888  888 888 "88b Y8b.          Y88b  d88P 888  888 888  888
 	}
 	system("CLS");
 	cout << "Error";
-}
-
-void StartGame::ShowScore()
-{
-	cout << "Game Over your Score is: " << Draw::score;
-
 }

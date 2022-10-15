@@ -1,6 +1,5 @@
 #pragma once
-#include <iostream>
-#include <Windows.h>
+#include <ctime>
 #include "Draw.h"
 #include <vector>
 using namespace std;
