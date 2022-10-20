@@ -12,6 +12,7 @@ void Food::GenerateFood()
 	fRange.Y = (3 - Draw::height) + 3;
 	fPosition.X = 3 + rand() % fRange.X;
 	fPosition.Y = 3 + rand() % fRange.Y;
+
 }
 
 COORD Food::RealPosition()
