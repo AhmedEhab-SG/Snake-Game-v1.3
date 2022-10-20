@@ -6,6 +6,7 @@ class Food
 {
 private:
 	COORD fPosition;
+	COORD fRange;
 public:
 	Food();
 	void GenerateFood();

@@ -22,11 +22,11 @@ void Draw::Visual()
 	cout << "Score: " << score << "\n\n";
 	for (int i = 0; i < height; i++)
 	{
-		cout << "#";
+		cout << "|";
 		for (int j = 0; j < width - 2; j++)
 		{
 			if (i == 0 || i == height - 1)
-				cout << "#";
+				cout << "\u2022";
 			else if (i == SnakePosition.Y && j + 1 == SnakePosition.X)
 				cout << "0";
 			else if (i == FoodPosition.Y && j + 1 == FoodPosition.X)
@@ -38,7 +38,7 @@ void Draw::Visual()
 				{
 					if (i == snakeBody[k].Y && j + 1 == snakeBody[k].X)
 					{
-						cout << 'o';
+						cout << '+';
 						checkBody = true;
 						break;
 					}
@@ -46,7 +46,7 @@ void Draw::Visual()
 				if (!checkBody) cout << ' ';
 			}
 		}
-		cout << "#\n";
+		cout << "|\n";
 	}
 
 }
