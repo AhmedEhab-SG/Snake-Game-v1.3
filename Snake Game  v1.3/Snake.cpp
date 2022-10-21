@@ -31,7 +31,7 @@ void Snake::SnakeMovement()
 	else if (position.Y < 1) position.Y = Draw::height - 2;
 
 	body.push_back(position);
-	if (body.size() > length) body.erase(body.begin());
+	if (body.size() > length) body.erase(body.begin());		
 }
 
 vector<COORD> Snake::returnBody()
