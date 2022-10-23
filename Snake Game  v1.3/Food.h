@@ -2,13 +2,15 @@
 #include <cstdlib>
 #include "Draw.h"
 
-class Food
+class Food 
 {
 private:
 	COORD fPosition;
-	COORD fRange;
+	//COORD fRange;
 public:
+	COORD fRange;
 	Food();
+	void FoodRange();
 	void GenerateFood();
 	COORD RealPosition();
 };

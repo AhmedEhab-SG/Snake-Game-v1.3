@@ -53,6 +53,11 @@ void Snake::Grow()
 	length++;
 }
 
+void Snake::BigGrow()
+{
+	length + 3;
+}
+
 bool Snake::SnakeCollided()
 {
 	/*if (position.X < 1 || position.X > Draw::width - 2 ||

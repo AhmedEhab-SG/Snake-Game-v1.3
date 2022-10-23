@@ -1,9 +1,10 @@
 #pragma once
 #include <iostream>
 #include <Windows.h>
+#include "Food.h"
 #include "Snake.h"
 #include <conio.h>
-#include "Food.h"
+#include "BigFood.h"
 #include "StartGame.h"
 using namespace std;
 
@@ -19,6 +20,7 @@ public:
 	void Visual();
 	void Controls();
 	void GenerateNewFood();
+	void GenerateNewBigFood();
 	bool GameController();
 	void ShowScore();
 

@@ -20,5 +20,6 @@ public:
 	vector<COORD> returnBody();
 	bool FoodEaten(COORD FoodPosition);
 	void Grow();
+	void BigGrow();
 	bool SnakeCollided();
 };

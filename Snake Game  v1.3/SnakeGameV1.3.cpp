@@ -16,8 +16,8 @@ int main()
 		drawOpj.Visual();
 		drawOpj.Controls();
 		drawOpj.GenerateNewFood();
+		drawOpj.GenerateNewBigFood();
 		drawOpj.GameController();
-
 	}
 	drawOpj.ShowScore();
 };
