@@ -42,12 +42,18 @@ void Draw::Visual()
 						checkBody = true;
 						break;
 					}
+					if (FoodPosition.X == SnakePosition.X && FoodPosition.Y == SnakePosition.Y
+						|| snakeBody[k].Y == FoodPosition.Y && snakeBody[k].X == FoodPosition.X)
+					{
+						food.GenerateFood();
+					}
 				}
 				if (!checkBody) cout << ' ';
 			}
 		}
 		cout << "|\n";
 	}
+	
 
 }
 
