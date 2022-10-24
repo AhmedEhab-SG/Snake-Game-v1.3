@@ -1,6 +1,8 @@
 #include "Draw.h"
 #include "Food.h"
 #include "Snake.h"
+#include "Food.h"
+#include "BigFood.h"
 #include "StartGame.h"
 
 
