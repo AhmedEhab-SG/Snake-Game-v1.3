@@ -1,12 +1,11 @@
 #include "Draw.h"
-#include "Snake.h"
 #include "Food.h"
+#include "Snake.h"
 #include "StartGame.h"
 
 
 int main()
 {
-	srand(time(NULL));
 	StartGame();
 	Draw drawOpj;
 	Draw::score = 0;

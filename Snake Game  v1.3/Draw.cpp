@@ -1,4 +1,5 @@
 #include "Draw.h"
+#include "BigFood.h"
 
 
 const int Draw::width = 100;
@@ -100,7 +101,7 @@ void Draw::GenerateNewBigFood()
 	{
 		bigFood.GenerateBigFood();
 		snake.BigGrow();
-		score + 10;
+		score += 5;
 	}
 }
 

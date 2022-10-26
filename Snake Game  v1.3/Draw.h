@@ -1,11 +1,12 @@
 #pragma once
+
 #include <iostream>
 #include <Windows.h>
 #include "Food.h"
 #include "Snake.h"
 #include <conio.h>
-#include "BigFood.h"
 #include "StartGame.h"
+//#include "BigFood.h"
 using namespace std;
 
 class Draw
