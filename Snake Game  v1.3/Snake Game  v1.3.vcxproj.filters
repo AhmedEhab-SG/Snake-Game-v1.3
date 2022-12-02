@@ -30,9 +30,6 @@
     <ClCompile Include="StartGame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BigFood.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Draw.h">
@@ -45,9 +42,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="StartGame.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="BigFood.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

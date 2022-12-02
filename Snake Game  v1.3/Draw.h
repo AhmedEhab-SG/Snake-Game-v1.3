@@ -6,6 +6,7 @@
 #include "Snake.h"
 #include <conio.h>
 #include "StartGame.h"
+#include <thread>
 //#include "BigFood.h"
 using namespace std;
 

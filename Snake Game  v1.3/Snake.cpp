@@ -61,7 +61,7 @@ void Snake::BigGrow()
 bool Snake::SnakeCollided()
 {
 	/*if (position.X < 1 || position.X > Draw::width - 2 ||
-		position.Y < 1 || position.Y > Draw::height - 2) return true;*/
+		position.Y < 1 || position.Y > Draw::height - 2) return true;*/   // if u want to gamever when its collided to the walls
 	for (int i = 0; i < length - 4; i++)
 	{
 		if (position.X == body[i].X && position.Y == body[i].Y) return true;

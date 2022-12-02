@@ -6,7 +6,6 @@ class Food
 {
 private:
 	COORD fPosition;
-	//COORD fRange;
 public:
 	COORD fRange;
 	Food();

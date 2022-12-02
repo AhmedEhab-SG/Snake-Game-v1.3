@@ -1,5 +1,4 @@
 #include "Draw.h"
-#include "BigFood.h"
 
 
 const int Draw::width = 100;
@@ -9,7 +8,6 @@ bool Draw::GameOver = false;
 
 Snake snake({ Draw::width / 2 , Draw::height / 2 }, 1); // snake initiliaztion to constractor
 Food food; // parameterless constructor
-BigFood bigFood; 
 
 void Draw::ClearScreen()
 {
@@ -20,7 +18,6 @@ void Draw::Visual()
 {
 	COORD SnakePosition = snake.RealPosition(); // carries real position and drawing
 	COORD FoodPosition = food.RealPosition();	// ~ ~ ~
-	COORD BigFoodPosition = bigFood.RealPosition();
 	vector<COORD> snakeBody = snake.returnBody();// bodyparts 
 	cout << "Score: " << score << "\n\n";
 	for (int i = 0; i < height; i++)
@@ -34,8 +31,6 @@ void Draw::Visual()
 				cout << "0";
 			else if (i == FoodPosition.Y && j + 1 == FoodPosition.X)
 				cout << "\u2022";
-			else if (i == BigFoodPosition.Y && j + 1 == BigFoodPosition.X)
-				cout << "@";
 			else
 			{
 				bool checkBody = false;
@@ -87,21 +82,12 @@ void Draw::Controls()
 
 void Draw::GenerateNewFood()
 {
+
 	if (snake.FoodEaten(food.RealPosition()))
 	{
 		food.GenerateFood();
 		snake.Grow();
 		score++;
-	}
-}
-
-void Draw::GenerateNewBigFood()
-{
-	if (snake.FoodEaten(bigFood.RealPosition()))
-	{
-		bigFood.GenerateBigFood();
-		snake.BigGrow();
-		score += 5;
 	}
 }
 

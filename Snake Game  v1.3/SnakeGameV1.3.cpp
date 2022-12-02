@@ -2,7 +2,6 @@
 #include "Food.h"
 #include "Snake.h"
 #include "Food.h"
-#include "BigFood.h"
 #include "StartGame.h"
 
 
@@ -17,8 +16,9 @@ int main()
 		drawOpj.Visual();
 		drawOpj.Controls();
 		drawOpj.GenerateNewFood();
-		drawOpj.GenerateNewBigFood();
 		drawOpj.GameController();
 	}
 	drawOpj.ShowScore();
+
+
 };
