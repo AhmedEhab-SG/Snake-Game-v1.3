@@ -21,7 +21,6 @@ public:
 	void Visual();
 	void Controls();
 	void GenerateNewFood();
-	void GenerateNewBigFood();
 	bool GameController();
 	void ShowScore();
 
