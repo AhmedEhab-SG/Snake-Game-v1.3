@@ -1,5 +1,5 @@
 # Snake Game
-This is a simple snake game using pure C++ with semi entro a good use of OOP and Classes.
+This is a simple snake game using C++ with semi intro a good use of OOP and Classes.
 
 ## Language
 [C++](https://cplusplus.com/) - Vanila C++
